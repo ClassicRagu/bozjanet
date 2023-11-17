@@ -7,7 +7,7 @@ import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
-import Grid from "@mui/material/Grid"
+import Grid from "@mui/material/Grid";
 
 const guides = require("./guides.json");
 
@@ -15,31 +15,32 @@ function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window;
   return {
     width,
-    height
+    height,
   };
 }
 
 function useWindowDimensions() {
-  const [windowDimensions, setWindowDimensions] = React.useState(getWindowDimensions());
+  const [windowDimensions, setWindowDimensions] = React.useState(
+    getWindowDimensions()
+  );
 
   React.useEffect(() => {
     function handleResize() {
       setWindowDimensions(getWindowDimensions());
     }
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return windowDimensions;
 }
 
 function App() {
-
   const [openKey, setOpenKey] = React.useState();
   const { height, width } = useWindowDimensions();
 
-  console.log(height)
+  console.log(height);
 
   const handleToggle = (key) => {
     setOpenKey(openKey !== key ? key : null);
@@ -76,16 +77,16 @@ function App() {
   guides.forEach((element) => {
     formattedGuides.push(
       <Grid item xs={width >= 1000 ? 4 : 12}>
-      <Card
-      key={element.Name}
-        variant="outlined"
-        sx={{
-          maxWidth: 800,
-          width: "100%"
-        }}
-      >
-        {card(element.Name, element.Guides)}
-      </Card>
+        <Card
+          key={element.Name}
+          variant="outlined"
+          sx={{
+            maxWidth: 800,
+            width: "100%",
+          }}
+        >
+          {card(element.Name, element.Guides)}
+        </Card>
       </Grid>
     );
   });
@@ -93,13 +94,17 @@ function App() {
   return (
     <div>
       <h1 style={{ textAlign: "center" }}>Bozja Guides</h1>
-      <Box 
-        style={{display:"flex", alignContent:'center', justifyContent:'center'}}
+      <Box
+        style={{
+          display: "flex",
+          alignContent: "center",
+          justifyContent: "center",
+        }}
       >
         <Grid
           container
           spacing={1}
-          alignItems= "top"
+          alignItems="top"
           justify="center"
           width={"75%"}
           style={{ minHeight: "200px" }}
@@ -109,24 +114,39 @@ function App() {
               variant="outlined"
               sx={{
                 maxWidth: 800,
-                width: "100%"
+                width: "100%",
               }}
             >
-              <Accordion expanded={false}>
+              <Accordion
+                expanded={openKey === "DRS"}
+                onChange={() => handleToggle("DRS")}
+              >
                 <AccordionSummary
                   aria-controls="panel1a-content"
                   id="DRS"
+                  expandIcon={<ExpandMoreIcon />}
                 >
-                  <Typography>
-                    <a href="https://lynn.pet/">DRS Guides</a>
-                  </Typography>
+                  <Typography>DRS</Typography>
                 </AccordionSummary>
+                <AccordionDetails>
+                  <p>
+                    <a href="https://bozja.info/drs/holster">
+                      Primal + Aether DRS Holsters
+                    </a>
+                  </p>
+                  <p>
+                    <a href="https://bozja.info/bozja/lostaction">
+                      Lost Actions
+                    </a>
+                  </p>
+                  <p>Please look at the Discord servers linked for more DRS info.</p>
+                </AccordionDetails>
               </Accordion>
             </Card>
-            </Grid>
-            {formattedGuides}
+          </Grid>
+          {formattedGuides}
         </Grid>
-        </Box>
+      </Box>
     </div>
   );
 }
