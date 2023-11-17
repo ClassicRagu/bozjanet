@@ -71,8 +71,12 @@
   {
     "Name": "EU Discord Servers",
     "Guides": [
-      ["(Chaos) Late Night", "https://discord.gg/28SRRADTK3"],
-      ["(Light) Savage Slimes", "https://discord.gg/SavageSlimes"]
+      ["(Chaos) Late Night [LNG: EN]", "https://discord.gg/28SRRADTK3"],
+      ["(Light) Savage Slimes [LNG: EN]", "https://discord.gg/SavageSlimes"],
+      ["(Light) Light Forays Group [LNG: EN + DE]", "https://discord.gg/LightForays"],
+      ["Conclave d'Exploration [LNG: FR]", "https://discord.gg/CgSRvTEHh8"],
+      ["Boreal Bridge [LNG: ES]", "https://discord.gg/wmTbhNQ5Wn"],
+      ["(Light) Savage Lemmings [LNG: DE]", "https://discord.gg/p3QwFREXJP"]
     ]
   }
 ]
