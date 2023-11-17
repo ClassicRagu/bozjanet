@@ -1,0 +1,8 @@
+{
+  "short_name": "Bozja Guides",
+  "name": "Bozja Guides",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

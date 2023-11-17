@@ -1,0 +1,69 @@
+[
+  {
+    "Name": "Leveling Guides",
+    "Guides": [
+      ["Powerleveling", "https://docs.google.com/presentation/d/1d5fXPAjpSwScplTubtVQd6TCeKaKl8uWWTG2hGJLshc/edit?usp=sharing"],
+      ["BSF and Zadnor Mettle and EXP", "https://docs.google.com/spreadsheets/d/12OTz5WzRtuNDrRRuvu9OSl-5SQkIEyN6SsySf0BLESQ/edit#gid=1138845215"]
+    ]
+  },
+  {
+    "Name": "Farming Guides",
+    "Guides": [
+      ["Cluster + Fragment Farming", "https://docs.google.com/presentation/d/1ax8nkureepnIoTTSdcNhyIHQgCLqbcZzoe_H8kpyunU/edit?usp=sharing"],
+      ["Omnifarm Guide", "https://docs.google.com/document/d/1oAqt15SuzRPWgyr8CQUior57mPBDSJEej7N98jKCCpQ/edit"],
+      ["Rank V Farming Guide", "https://i.imgur.com/hkRy6YO.png"],
+      ["Bozja Weather", "https://lynn.pet/forecast/fragments"]
+    ]
+  },
+  {
+    "Name": "BSF and Zadnor",
+    "Guides": [
+      ["Carter's BSF/Zadnor Info", "https://tinyurl.com/carterbozjadoc"],
+      ["General BSF Guide", "https://docs.google.com/document/u/0/d/1zl-Z99fF1x8uhZwk9ewW4Q5UcR2dLLS_zzxQSRFWQNM"],
+      ["Zadnor CE Guide", "https://docs.google.com/document/d/1x6Yf8ewBXAPt0nMXt0gFPVjaby_KrTx-W4Zjal-I_Yg/edit"],
+      ["General BSF/Zadnor Info", "https://docs.google.com/spreadsheets/d/1P-BB75bAYytcYpPXPrgXkvWg_Xvs7_TwloE9tz9cxS0/edit?usp=drivesdk"],
+      ["BSF Map", "https://preview.redd.it/ryjo0y8ymrb71.png?width=2048&format=png&auto=webp&s=90a556eb4ccd5c49729a7507e7d7eca2c22a247f"],
+      ["Zadnor Map", "https://preview.redd.it/un3kcnv6rrb71.png?width=2048&format=png&auto=webp&s=f9728079c715f8cfb28b121a3731fdb7258a8087"]
+    ]
+  },
+  {
+    "Name": "Duels",
+    "Guides": [
+      ["Duel Playlist", "https://www.youtube.com/playlist?list=PLtYQjW6LdeRNdNq-ae4cEM3yQUkVrVMO1"],
+      ["No Excellence Overslot Cheese", "https://docs.google.com/document/d/1uOc66HMhw0GauYSjX_Mwx876oB-kC1eVQujY4tLZ468/edit?usp=sharing"],
+      ["Excellence Overslot Cheese", "https://youtu.be/kWtYQZq0x0c?si=UxvRW3m3Do-795OK"]
+    ]
+  },
+  {
+    "Name": "DRN",
+    "Guides": [
+      ["DRN Speedrun Guide", "https://docs.google.com/presentation/d/1QP7R6tUbwSNWX30crFon2z3xhfe0m5NPu7pCySyI6r4/edit#slide=id.p"],
+      ["CEM DRN Loadouts", "https://i.imgur.com/y0jNEno.png"]
+    ]
+  },
+  {
+    "Name": "CLL + Dal",
+    "Guides": [
+      ["CLL + Dal Strategies", "https://docs.google.com/presentation/d/1IXJalAFUasymj1nIxfF2ihi4wR7MpetGHJO41kgqZa4/edit?usp=sharing"],
+      ["CLL + Dal Scaling", "https://docs.google.com/spreadsheets/d/15VOR-2mV-vJUaptjEQRKQzommbh7T02K69wsb0UXq_U/edit?usp=sharing"],
+      ["CLL + Dal Spawning Logic", "https://docs.google.com/document/d/1nDnR3vjzUqkx30JbzPZE2oNZoFSIQfv3D3kRW2vGZ5I/edit?usp=sharing"]
+    ]
+  },
+  {
+    "Name": "Actions",
+    "Guides": [
+      ["Lost Actions", "https://ffxiv.kmiwl.de/bozja/"],
+      ["How to do Damage in Bozja", "https://i.imgur.com/OUHdHZT.png"]
+    ]
+  },
+  {
+    "Name": "NA Discord Servers",
+    "Guides": [
+      ["(Primal) PEBE", "https://discord.gg/PEBE"],
+      ["(Crystal) CAFE", "https://discord.gg/c-a-f-e"],
+      ["(Aether) Lego Steppers", "https://discord.gg/YKP76AsMw8"],
+      ["(Crystal) CEM", "https://discord.gg/cem"],
+      ["(Primal) THL", "https://discord.gg/thehelplines"]
+    ]
+  }
+]
