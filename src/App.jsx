@@ -1,95 +1,13 @@
 import "./App.css";
 import * as React from "react";
-import Accordion from "@mui/material/Accordion";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import Typography from "@mui/material/Typography";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import Box from "@mui/material/Box";
-import Card from "@mui/material/Card";
-import Grid from "@mui/material/Grid";
-
-const guides = require("./guides.json");
-
-function getWindowDimensions() {
-  const { innerWidth: width, innerHeight: height } = window;
-  return {
-    width,
-    height,
-  };
-}
-
-function useWindowDimensions() {
-  const [windowDimensions, setWindowDimensions] = React.useState(
-    getWindowDimensions()
-  );
-
-  React.useEffect(() => {
-    function handleResize() {
-      setWindowDimensions(getWindowDimensions());
-    }
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  return windowDimensions;
-}
+import { Box, Grid, Button } from "@mui/material";
+import Guides from "./components/Guides";
+import { useWindowDimensions } from "./hooks/useWindowDimensions";
+import FAQ from "./components/FAQ";
 
 function App() {
-  const [openKey, setOpenKey] = React.useState();
+  const [pageState, setPageState] = React.useState("guides");
   const { height, width } = useWindowDimensions();
-
-  console.log(height);
-
-  const handleToggle = (key) => {
-    setOpenKey(openKey !== key ? key : null);
-  };
-
-  const formattedGuides = [];
-
-  const card = (guideName, internalGuides) => {
-    const guideList = [];
-    internalGuides.forEach((element) => {
-      guideList.push(
-        <p>
-          <a href={element[1]}>{element[0]}</a>
-        </p>
-      );
-    });
-    return (
-      <Accordion
-        expanded={openKey === guideName}
-        onChange={() => handleToggle(guideName)}
-      >
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id={guideName}
-        >
-          <Typography>{guideName}</Typography>
-        </AccordionSummary>
-        <AccordionDetails>{guideList}</AccordionDetails>
-      </Accordion>
-    );
-  };
-
-  guides.forEach((element) => {
-    formattedGuides.push(
-      <Grid item xs={width >= 1000 ? 4 : 12}>
-        <Card
-          key={element.Name}
-          variant="outlined"
-          sx={{
-            maxWidth: 800,
-            width: "100%",
-          }}
-        >
-          {card(element.Name, element.Guides)}
-        </Card>
-      </Grid>
-    );
-  });
 
   return (
     <div>
@@ -106,47 +24,129 @@ function App() {
           spacing={1}
           alignItems="top"
           justify="center"
-          width={"75%"}
-          style={{ minHeight: "200px" }}
+          width={"100%"}
+          style={{ minHeight: "75px", maxWidth: "1000px", marginBottom: "5px" }}
         >
-          <Grid item xs={width >= 1000 ? 4 : 12}>
-            <Card
-              variant="outlined"
-              sx={{
-                maxWidth: 800,
-                width: "100%",
+          {/*<Grid
+            item
+            xs={width >= 800 ? 6 : 12}
+            style={{
+              display: "flex",
+              alignContent: "center",
+              justifyContent: "center",
+              maxHeight: "50px",
+              minWidth: "250px"
+            }}
+          >
+            <Button
+              size="large"
+              style={{minWidth: "250px"}}
+              variant={
+                pageState === "initial" || pageState === "new"
+                  ? "contained"
+                  : "outlined"
+              }
+              onClick={() => {
+                setPageState("new");
               }}
             >
-              <Accordion
-                expanded={openKey === "DRS"}
-                onChange={() => handleToggle("DRS")}
-              >
-                <AccordionSummary
-                  aria-controls="panel1a-content"
-                  id="DRS"
-                  expandIcon={<ExpandMoreIcon />}
-                >
-                  <Typography>DRS</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <p>
-                    <a href="https://bozja.info/drs/holster">
-                      Primal + Aether DRS Holsters
-                    </a>
-                  </p>
-                  <p>
-                    <a href="https://bozja.info/bozja/lostaction">
-                      Lost Actions
-                    </a>
-                  </p>
-                  <p>Please look at the Discord servers linked for more DRS info.</p>
-                </AccordionDetails>
-              </Accordion>
-            </Card>
+              I am new to Bozja
+            </Button>
+            </Grid>*/}
+          <Grid
+            item
+            xs={width >= 550 ? 6 : 12}
+            style={{
+              display: "flex",
+              alignContent: "center",
+              justifyContent: "center",
+              maxHeight: "50px",
+              minWidth: "250px"
+            }}
+          >
+            <Button
+              size="large"
+              style={{minWidth: "250px"}}
+              variant={
+                pageState === "initial" || pageState === "FAQ"
+                  ? "contained"
+                  : "outlined"
+              }
+              onClick={() => {
+                setPageState("FAQ");
+              }}
+            >
+              FAQ
+            </Button>
           </Grid>
-          {formattedGuides}
+          <Grid
+            item
+            xs={width >= 550 ? 6 : 12}
+            style={{
+              display: "flex",
+              alignContent: "center",
+              justifyContent: "center",
+              maxHeight: "50px",
+              minWidth: "250px"
+            }}
+          >
+            <Button
+              size="large"
+              variant={
+                pageState === "initial" || pageState === "guides"
+                  ? "contained"
+                  : "outlined"
+              }
+              style={{minWidth: "250px"}}
+              onClick={() => {
+                setPageState("guides");
+              }}
+            >
+              I'm here for Guides
+            </Button>
+          </Grid>
         </Grid>
       </Box>
+      {pageState === "guides" ? (
+        <Box
+          style={{
+            display: "flex",
+            alignContent: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Grid
+            container
+            spacing={1}
+            alignItems="top"
+            justify="center"
+            width={"75%"}
+            style={{ minHeight: "200px" }}
+          >
+            <Guides />
+          </Grid>
+        </Box>
+      ) : null}
+      {pageState === "FAQ" ? (
+        <Box
+          style={{
+            display: "flex",
+            alignContent: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Grid
+            container
+            spacing={1}
+            alignItems="top"
+            justify="center"
+            width={"75%"}
+            style={{ minHeight: "200px" }}
+          >
+            <FAQ />
+          </Grid>
+        </Box>
+      ) : null}
     </div>
   );
 }

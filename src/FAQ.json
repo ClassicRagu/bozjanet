@@ -1,0 +1,88 @@
+[
+  {
+    "Name": "How Do I Unlock Bozja?",
+    "Info": [
+      "Bozja is unlocked by first completing the <LINK> questline.",
+      "Once Return to Ivalice is completed you can begin the quest <LINK>."
+    ],
+    "Links": [
+      [
+        "Return to Ivalice",
+        "https://ffxiv.consolegameswiki.com/wiki/Return_to_Ivalice"
+      ],
+      [
+        "Hail to the Queen",
+        "https://ffxiv.consolegameswiki.com/wiki/Hail_to_the_Queen"
+      ]
+    ]
+  },
+  {
+    "Name": "How Do I Increase My Rank?",
+    "Info": [
+      "Do Skirmishes and Critical Engagements.",
+      "Killing enemies outside of Skirmishes and CEs yields 0 mettle."
+    ],
+    "Links": [[], []]
+  },
+  {
+    "Name": "How Do I Get Lost Actions?",
+    "Info": [
+      "Lost Actions are obtained via Forgotten Fragments. Most fragments are obtained from overworld enemies though some come from other sources.",
+      "You can use this <LINK> to help find the fragment you are looking for.",
+      "Here is a guide on farming fragments as well: <LINK>"
+    ],
+    "Links": [
+      [],
+      ["Lost Action Helper", "https://bozja.info/bozja/lostaction"],
+      [
+        "Cluster + Fragment Farming Guide",
+        "https://docs.google.com/presentation/d/1ax8nkureepnIoTTSdcNhyIHQgCLqbcZzoe_H8kpyunU/edit?usp=sharing"
+      ]
+    ]
+  },
+  {
+    "Name": "How Do I Get Bozjan Clusters?",
+    "Info": [
+      "Clusters have a chance of dropping from any 4th Legion enemies.",
+      "Here is a guide on farming clusters as well: <LINK>"
+    ],
+    "Links": [[],
+    [
+      "Cluster + Fragment Farming Guide",
+      "https://docs.google.com/presentation/d/1ax8nkureepnIoTTSdcNhyIHQgCLqbcZzoe_H8kpyunU/edit?usp=sharing"
+    ]]
+  },
+  {
+    "Name": "Is it ok to do Castrum with 5 people?",
+    "Info": [
+      "Yes, CLL scales to the number of players. I would only suggest not going in with 4 or less players.",
+      "If you want more technical numbers check out this <LINK>."
+    ],
+    "Links": [
+      [],
+      [
+        "CLL + Dal Scaling Spreadsheet",
+        "https://docs.google.com/spreadsheets/d/15VOR-2mV-vJUaptjEQRKQzommbh7T02K69wsb0UXq_U/edit?usp=sharing"
+      ]
+    ]
+  },
+  {
+    "Name": "Why is nobody queuing for Delubrum?",
+    "Info": [
+      "Delubrum Reginae (DRN) is entirely managed via the Party Finder feature.",
+      "DRN also has a required 10 minute queue for parties less than 24 so don't be concerned if it takes a bit to get in."
+    ],
+    "Links": [[], []]
+  },
+  {
+    "Name": "How do I deal damage in Bozja?",
+    "Info": [
+      "If you are in BSF or Zadnor <LINK>.",
+      "If you are in Delubrum Reginae <LINK>."
+    ],
+    "Links": [
+      ["Follow this Guide", "https://i.imgur.com/OUHdHZT.png"],
+      ["Follow this Guide", "https://i.imgur.com/y0jNEno.png"]
+    ]
+  }
+]

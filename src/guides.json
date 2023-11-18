@@ -1,5 +1,13 @@
 [
   {
+    "Name": "DRS",
+    "Guides": [
+      ["Primal + Aether DRS Holsters", "https://bozja.info/drs/holster"],
+      ["Lost Actions", "https://bozja.info/bozja/lostaction"]
+    ],
+    "Additional": ["Please look at the Discord servers linked for more DRS info."]
+  },
+  {
     "Name": "Leveling Guides",
     "Guides": [
       ["Powerleveling", "https://docs.google.com/presentation/d/1d5fXPAjpSwScplTubtVQd6TCeKaKl8uWWTG2hGJLshc/edit?usp=sharing"],
