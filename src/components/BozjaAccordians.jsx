@@ -44,7 +44,7 @@ function BozjaAccordians(props) {
       >
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
+          aria-controls={guideName}
           id={guideName}
         >
           <Typography>{guideName}</Typography>

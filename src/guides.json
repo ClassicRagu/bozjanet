@@ -86,5 +86,10 @@
       ["Boreal Bridge [LNG: ES]", "https://discord.gg/wmTbhNQ5Wn"],
       ["(Light) Savage Lemmings [LNG: DE]", "https://discord.gg/p3QwFREXJP"]
     ]
+  },
+  {
+    "Name": "About",
+    "Guides": [],
+    "Additional": ["This site is developed and maintained by (Coeurl) Celliera Tsukemeownya."]
   }
 ]
