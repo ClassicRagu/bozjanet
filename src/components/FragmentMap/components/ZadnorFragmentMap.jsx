@@ -102,9 +102,9 @@ function ZadnorFragmentMap() {
               </Marker>
             ) : null}
             {<Circle
-                center={[33.32, 10.09]}
+                center={[33.45, 10.235]}
                 pathOptions={{ fillColor: 'blue', color: 'blue' }}
-                radius={3500}
+                radius={5200}
               >
                 <Popup>
                   test
