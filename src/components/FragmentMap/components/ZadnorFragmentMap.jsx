@@ -57,23 +57,9 @@ function ZadnorFragmentMap() {
             style={{ width: "100%", height: "100%" }}
             zoomControl={false}
           >
-            {fragment && fragments[fragment].Quartermaster ? (
+            {fragment && fragments[fragment].Dal ? (
               <Marker
-                position={[32.6, 9.65]}
-                icon={
-                  new Icon({
-                    iconUrl: markerIconPng,
-                    iconSize: [21, 41],
-                    iconAnchor: [11, 41],
-                  })
-                }
-              >
-                <Popup>Resistance Quartermaster</Popup>
-              </Marker>
-            ) : null}
-            {fragment && fragments[fragment].CLL ? (
-              <Marker
-                position={[33.4, 9.85]}
+                position={[33.6, 10.15]}
                 icon={
                   new Icon({
                     iconUrl: "https://xivapi.com/i/063000/063912_hr1.png",
@@ -82,29 +68,13 @@ function ZadnorFragmentMap() {
                   })
                 }
               >
-                <Popup>CLL Prisoner Chests</Popup>
-              </Marker>
-            ) : null}
-            {fragment && (fragments[fragment].DR || fragments[fragment].DRS) ? (
-              <Marker
-                position={[32.54, 9.6]}
-                icon={
-                  new Icon({
-                    iconUrl: "https://xivapi.com/i/061000/061838_hr1.png",
-                    iconSize: [34, 34],
-                    iconAnchor: [17, 17],
-                  })
-                }
-              >
-                <Popup>
-                  Delubrum Reginae {fragments[fragment].DRS ? "(Savage)" : null}
-                </Popup>
+                <Popup>First Boss Dal Chest</Popup>
               </Marker>
             ) : null}
             {<Circle
-                center={[33.45, 10.235]}
+                center={[33.25, 10.1]}
                 pathOptions={{ fillColor: 'blue', color: 'blue' }}
-                radius={5200}
+                radius={7000}
               >
                 <Popup>
                   test

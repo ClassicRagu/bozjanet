@@ -53,10 +53,6 @@ function FragmentLookup() {
             }}
           >
             <p>
-              This page is under construction. Zadnor and better styling will be
-              added in later releases.
-            </p>
-            <p>
               Thank you to <a href="https://xivapi.com/">XIVApi</a> for
               providing the map and icons.
             </p>
@@ -130,7 +126,8 @@ function FragmentLookup() {
             !fragments[fragment].Zadnor)) ? (
           <BSFFragmentMap />
         ) : null}
-        {fragment && true ? <ZadnorFragmentMap /> : null}
+        {fragment && fragments[fragment].Zadnor ||
+          fragments[fragment].Dal ? <ZadnorFragmentMap /> : null}
         <div
           style={{
             display: "flex",

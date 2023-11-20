@@ -53,13 +53,13 @@ export const zadnorMonsterLocations = {
       },
     ],
     Sprites: [
-        {
-            Monster: "Lightning Sprite",
-            Level: 2,
-            Location: [32.581, 10.44],
-            radius: 8500,
-            additionalInfo: "Thunder only",
-          },
+      {
+        Monster: "Lightning Sprite",
+        Level: 2,
+        Location: [32.581, 10.44],
+        radius: 8500,
+        additionalInfo: "Thunder only",
+      },
       {
         Monster: "Water Sprite",
         Level: 3,
@@ -67,8 +67,31 @@ export const zadnorMonsterLocations = {
         radius: 6000,
         additionalInfo: "Rain only",
       },
+      {
+        Monster: "Ice Sprite",
+        Level: 4,
+        Location: [32.49, 9.98],
+        radius: 6500,
+        additionalInfo: "Snow only",
+      },
     ],
-    Star: [],
+    Star: [
+      {
+        Monster: "Vinegaroon Executioner",
+        Level: "Star",
+        Location: [32.54, 10.51],
+      },
+      {
+        Monster: "Anancus",
+        Level: "Star",
+        Location: [32.64, 10.15],
+      },
+      {
+        Monster: "Stratogryph",
+        Level: "Star",
+        Location: [32.155, 9.78],
+      },
+    ],
   },
   Zone2: {
     Normal: [
@@ -139,6 +162,13 @@ export const zadnorMonsterLocations = {
     ],
     Sprites: [
       {
+        Monster: "Ice Sprite",
+        Level: 3,
+        Location: [32.86, 9.64],
+        radius: 8000,
+        additionalInfo: "Snow only",
+      },
+      {
         Monster: "Lightning Sprite",
         Level: 4,
         Location: [32.55, 9.35],
@@ -153,7 +183,23 @@ export const zadnorMonsterLocations = {
         additionalInfo: "Rain only",
       },
     ],
-    Star: [],
+    Star: [
+      {
+        Monster: "Earth Eater",
+        Level: "Star",
+        Location: [32.45, 9.57],
+      },
+      {
+        Monster: "Aglaophotis",
+        Level: "Star",
+        Location: [32.58, 9.395],
+      },
+      {
+        Monster: "Lord Ochu",
+        Level: "Star",
+        Location: [33.04, 9.15],
+      },
+    ],
   },
   Zone3: {
     Normal: [
@@ -207,24 +253,24 @@ export const zadnorMonsterLocations = {
       },
     ],
     Normal5: [
-        {
-            Monster: "Zadnor Golem",
-            Level: 5,
-            Location: [33.28, 10.04],
-            radius: 4000,
-          },
-          {
-            Monster: "Zadnor Wivre",
-            Level: 5,
-            Location: [33.15, 10.02],
-            radius: 5000,
-          },
-          {
-            Monster: "Zadnor Gagana",
-            Level: 5,
-            Location: [33.45, 10.235],
-            radius: 5200,
-          },
+      {
+        Monster: "Zadnor Golem",
+        Level: 5,
+        Location: [33.28, 10.04],
+        radius: 4000,
+      },
+      {
+        Monster: "Zadnor Wivre",
+        Level: 5,
+        Location: [33.15, 10.02],
+        radius: 5000,
+      },
+      {
+        Monster: "Zadnor Gagana",
+        Level: 5,
+        Location: [33.45, 10.235],
+        radius: 5200,
+      },
     ],
     Ashkin: [
       {
@@ -257,7 +303,30 @@ export const zadnorMonsterLocations = {
         radius: 6000,
         additionalInfo: "Thunder only",
       },
+      {
+        Monster: "Ice Sprite",
+        Level: 5,
+        Location: [33.25, 10.1],
+        radius: 7000,
+        additionalInfo: "Snow only",
+      },
     ],
-    Star: [],
+    Star: [
+      {
+        Monster: "Glyptodon",
+        Level: "Star",
+        Location: [33.3, 9.54],
+      },
+      {
+        Monster: "Molten Scorpion",
+        Level: "Star",
+        Location: [33.13, 9.89],
+      },
+      {
+        Monster: "Vapula",
+        Level: "Star",
+        Location: [33.5, 9.96],
+      },
+    ],
   },
 };
