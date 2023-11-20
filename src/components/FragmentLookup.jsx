@@ -23,61 +23,69 @@ function FragmentLookup() {
   const [action, setAction] = React.useState(null);
   const [inputValue, setInputValue] = React.useState("");
   const [z, a] = React.useState([]);
-  
+
   const setColor = (level) => {
-    switch(level) {
-        case 1:
-            return "green"
-        case 2:
-            return "yellow"
-        case 3:
-            return "red"
-        case 4:
-            return "purple"
-        case 5:
-            return "black"
-        default:
-            return "blue"
+    switch (level) {
+      case 1:
+        return "green";
+      case 2:
+        return "yellow";
+      case 3:
+        return "red";
+      case 4:
+        return "purple";
+      case 5:
+        return "black";
+      case "Critical Engagement":
+        return "white";
+      default:
+        return "blue";
     }
-  }
+  };
 
   React.useEffect(() => {
     if (action) {
       const tmp = [];
-      fragments[action.Fragment].BSF.forEach((locations) => {
-        locations.forEach((e) => {
-          if (e.Level === "Star") {
-            tmp.push(
-              <Marker
-                position={e.Location}
-                icon={
-                  new Icon({
-                    iconUrl: markerIconPng,
-                    iconSize: [21, 41],
-                    iconAnchor: [11, 41],
-                  })
-                }
-              >
-                <Popup>
-                  {e.Monster} <br /> Level:{e.Level}
-                </Popup>
-              </Marker>
-            );
-          } else if (e) {
-            tmp.push(
-              <Circle
-                center={e.Location}
-                pathOptions={{ fillColor: setColor(e.Level), color: setColor(e.Level) }}
-                radius={e.radius}
-              >
-                <Popup>
-                  {e.Monster} <br /> Level:{e.Level}
-                </Popup>
-              </Circle>
-            );
-          }
-        });
-      });
+      {
+        if (fragments[action.Fragment].BSF)
+          fragments[action.Fragment].BSF.forEach((locations) => {
+            locations.forEach((e) => {
+              if (e.Level === "Star") {
+                tmp.push(
+                  <Marker
+                    position={e.Location}
+                    icon={
+                      new Icon({
+                        iconUrl: markerIconPng,
+                        iconSize: [21, 41],
+                        iconAnchor: [11, 41],
+                      })
+                    }
+                  >
+                    <Popup>
+                      {e.Monster} <br /> Level:{e.Level}
+                    </Popup>
+                  </Marker>
+                );
+              } else if (e) {
+                tmp.push(
+                  <Circle
+                    center={e.Location}
+                    pathOptions={{
+                      fillColor: setColor(e.Level),
+                      color: setColor(e.Level),
+                    }}
+                    radius={e.radius}
+                  >
+                    <Popup>
+                      {e.Monster} <br /> Level:{e.Level}
+                    </Popup>
+                  </Circle>
+                );
+              }
+            });
+          });
+      }
 
       a(tmp);
     } else {
@@ -114,7 +122,7 @@ function FragmentLookup() {
             </p>
             <p>
               Thank you to <a href="https://xivapi.com/">XIVApi</a> for
-              providing the BSF map image.
+              providing the map and icons.
             </p>
             <Autocomplete
               inputValue={inputValue}
@@ -135,7 +143,7 @@ function FragmentLookup() {
               id="combo-box-demo"
               options={listActions}
               sx={{ width: 300 }}
-              style={{ color: "blue", margin: "10px" }}
+              style={{ color: "blue", margin: "10px", minWidth: "350px" }}
               renderInput={(params) => (
                 <TextField {...params} label="Action/Essence/Item" />
               )}
@@ -192,13 +200,27 @@ function FragmentLookup() {
                     position={[33.4, 9.85]}
                     icon={
                       new Icon({
-                        iconUrl: 'https://xivapi.com/i/063000/063912_hr1.png',
+                        iconUrl: "https://xivapi.com/i/063000/063912_hr1.png",
                         iconSize: [50, 50],
                         iconAnchor: [25, 25],
                       })
                     }
                   >
                     <Popup>CLL Prisoner Chests</Popup>
+                  </Marker>
+                ) : null}
+                {action && (fragments[action.Fragment].DR || fragments[action.Fragment].DRS)  ? (
+                  <Marker
+                    position={[32.54, 9.6]}
+                    icon={
+                      new Icon({
+                        iconUrl: "https://xivapi.com/i/061000/061838_hr1.png",
+                        iconSize: [34, 34],
+                        iconAnchor: [17, 17],
+                      })
+                    }
+                  >
+                    <Popup>Delubrum Reginae {fragments[action.Fragment].DRS ? "(Savage)" : null}</Popup>
                   </Marker>
                 ) : null}
                 {/*<Circle
