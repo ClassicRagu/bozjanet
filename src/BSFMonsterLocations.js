@@ -48,6 +48,12 @@ export const bsfMonsterLocations = {
     ],
     Sprites: [
       {
+        Monster: "Rain Sprite",
+        Level: 4,
+        Location: [32.83, 10.47],
+        radius: 5000,
+      },
+      {
         Monster: "Earth Sprite",
         Level: 2,
         Location: [32.82, 10.19],
@@ -156,12 +162,12 @@ export const bsfMonsterLocations = {
       },
     ],
     Sprites: [
-        {
-            Monster: "Rain Sprite",
-            Level: 2,
-            Location: [32.83, 10.47],
-            radius: 5000,
-          },
+      {
+        Monster: "Rain Sprite",
+        Level: 2,
+        Location: [33.03, 10.43],
+        radius: 5000,
+      },
       {
         Monster: "Lightning Sprite",
         Level: 3,
@@ -179,24 +185,24 @@ export const bsfMonsterLocations = {
         Level: 5,
         Location: [33.02, 9.74],
         radius: 5500,
-      }
+      },
     ],
     Star: [
-        {
-            Monster: "Viy",
-            Level: "Star",
-            Location: [33.08, 10.35],
-          },
-          {
-            Monster: "Psoglav",
-            Level: "Star",
-            Location: [33.16, 10.56],
-          }, 
-          {
-            Monster: "Smok",
-            Level: "Star",
-            Location: [32.96, 9.7],
-          }, 
+      {
+        Monster: "Viy",
+        Level: "Star",
+        Location: [33.08, 10.35],
+      },
+      {
+        Monster: "Psoglav",
+        Level: "Star",
+        Location: [33.16, 10.56],
+      },
+      {
+        Monster: "Smok",
+        Level: "Star",
+        Location: [32.96, 9.7],
+      },
     ],
   },
   Zone3: {
@@ -300,31 +306,30 @@ export const bsfMonsterLocations = {
         Level: 4,
         Location: [33.14, 9.89],
         radius: 5000,
-      }
-      ,
+      },
       {
         Monster: "Wind Sprite",
         Level: 5,
         Location: [33.16, 10.05],
         radius: 5500,
-      }
+      },
     ],
     Star: [
-        {
-            Monster: "Bird of Barathrum",
-            Level: "Star",
-            Location: [33.4, 10.15],
-          },
-          {
-            Monster: "Clingy Claire",
-            Level: "Star",
-            Location: [33.15, 9.83],
-          },
-          {
-            Monster: "Patty",
-            Level: "Star",
-            Location: [33.15, 9.38],
-          },
+      {
+        Monster: "Bird of Barathrum",
+        Level: "Star",
+        Location: [33.4, 10.15],
+      },
+      {
+        Monster: "Clingy Claire",
+        Level: "Star",
+        Location: [33.15, 9.83],
+      },
+      {
+        Monster: "Patty",
+        Level: "Star",
+        Location: [33.15, 9.38],
+      },
     ],
   },
 };
