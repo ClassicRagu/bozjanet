@@ -4,6 +4,7 @@ import { Box, Grid, Button } from "@mui/material";
 import Guides from "./components/Guides";
 import { useWindowDimensions } from "./hooks/useWindowDimensions";
 import FAQ from "./components/FAQ";
+import FragmentLookup from "./components/FragmentLookup";
 
 function App() {
   const [pageState, setPageState] = React.useState("guides");
@@ -55,7 +56,7 @@ function App() {
             </Grid>*/}
           <Grid
             item
-            xs={width >= 550 ? 6 : 12}
+            xs={width >= 800 ? 4 : 12}
             style={{
               display: "flex",
               alignContent: "center",
@@ -81,7 +82,7 @@ function App() {
           </Grid>
           <Grid
             item
-            xs={width >= 550 ? 6 : 12}
+            xs={width >= 800 ? 4 : 12}
             style={{
               display: "flex",
               alignContent: "center",
@@ -103,6 +104,32 @@ function App() {
               }}
             >
               I'm here for Guides
+            </Button>
+          </Grid>
+          <Grid
+            item
+            xs={width >= 800 ? 4 : 12}
+            style={{
+              display: "flex",
+              alignContent: "center",
+              justifyContent: "center",
+              maxHeight: "50px",
+              minWidth: "250px"
+            }}
+          >
+            <Button
+              size="large"
+              variant={
+                pageState === "initial" || pageState === "fragments"
+                  ? "contained"
+                  : "outlined"
+              }
+              style={{minWidth: "250px"}}
+              onClick={() => {
+                setPageState("fragments");
+              }}
+            >
+              (Alpha) Fragment Map
             </Button>
           </Grid>
         </Grid>
@@ -147,6 +174,11 @@ function App() {
           </Grid>
         </Box>
       ) : null}
+      {
+        pageState === "fragments" ? <>
+        <FragmentLookup />
+        </> : null
+      }
     </div>
   );
 }
