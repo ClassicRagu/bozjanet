@@ -38,12 +38,14 @@ export const bsfMonsterLocations = {
         Level: 3,
         Location: [32.595, 10.15],
         radius: 6000,
+        additionalInfo: "Night only"
       },
       {
         Monster: "Bozjan Wraith",
         Level: 5,
         Location: [32.78, 10.68],
         radius: 6000,
+        additionalInfo: "Night only"
       },
     ],
     Sprites: [
@@ -52,24 +54,28 @@ export const bsfMonsterLocations = {
         Level: 4,
         Location: [32.83, 10.47],
         radius: 5000,
+        additionalInfo: "Rain only"
       },
       {
         Monster: "Earth Sprite",
         Level: 2,
         Location: [32.82, 10.19],
         radius: 7500,
+        additionalInfo: "Dust Storm only"
       },
       {
         Monster: "Wind Sprite",
         Level: 3,
         Location: [32.68, 10.4],
         radius: 4000,
+        additionalInfo: "Gales only"
       },
       {
         Monster: "Lightning Sprite",
         Level: 5,
         Location: [32.63, 10.66],
         radius: 7500,
+        additionalInfo: "Thunderstorm only"
       },
     ],
     Star: [
@@ -153,12 +159,14 @@ export const bsfMonsterLocations = {
         Level: 3,
         Location: [33.09, 10.17],
         radius: 4000,
+        additionalInfo: "Night only"
       },
       {
         Monster: "Bozjan Dullahan",
         Level: 5,
         Location: [33.3, 10.53],
         radius: 5000,
+        additionalInfo: "Night only"
       },
     ],
     Sprites: [
@@ -167,24 +175,28 @@ export const bsfMonsterLocations = {
         Level: 2,
         Location: [33.03, 10.43],
         radius: 5000,
+        additionalInfo: "Rain only"
       },
       {
         Monster: "Lightning Sprite",
         Level: 3,
         Location: [32.93, 10.27],
         radius: 3000,
+        additionalInfo: "Thunderstorm only"
       },
       {
         Monster: "Wind Sprite",
         Level: 4,
         Location: [33.025, 10],
         radius: 5500,
+        additionalInfo: "Gales only"
       },
       {
         Monster: "Earth Sprite",
         Level: 5,
         Location: [33.02, 9.74],
         radius: 5500,
+        additionalInfo: "Dust Storm only"
       },
     ],
     Star: [
@@ -280,12 +292,14 @@ export const bsfMonsterLocations = {
         Level: 3,
         Location: [33.2, 9.87],
         radius: 4000,
+        additionalInfo: "Night only"
       },
       {
         Monster: "Bozjan Rider",
         Level: 5,
         Location: [33.32, 10.07],
         radius: 6000,
+        additionalInfo: "Night only"
       },
     ],
     Sprites: [
@@ -294,24 +308,28 @@ export const bsfMonsterLocations = {
         Level: 2,
         Location: [33.23, 9.605],
         radius: 7500,
+        additionalInfo: "Thunderstorm only"
       },
       {
         Monster: "Rain Sprite",
         Level: 3,
         Location: [33.13, 9.75],
         radius: 5500,
+        additionalInfo: "Rain only"
       },
       {
         Monster: "Earth Sprite",
         Level: 4,
         Location: [33.14, 9.89],
         radius: 5000,
+        additionalInfo: "Dust Storm only"
       },
       {
         Monster: "Wind Sprite",
         Level: 5,
         Location: [33.16, 10.05],
         radius: 5500,
+        additionalInfo: "Gales only"
       },
     ],
     Star: [

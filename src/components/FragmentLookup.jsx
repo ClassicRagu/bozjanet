@@ -80,7 +80,7 @@ function FragmentLookup() {
                     radius={e.radius}
                   >
                     <Popup>
-                      {e.Monster} <br /> Level:{e.Level}
+                      {e.Monster} <br /> Level:{e.Level} <br /> {e.additionalInfo}
                     </Popup>
                   </Circle>
                 );
@@ -119,8 +119,7 @@ function FragmentLookup() {
             }}
           >
             <p>
-              This page is under construction. It will include Resolve Frags,
-              CLL, DRN, Zadnor, and better styling in later releases.
+              This page is under construction. Zadnor and better styling will be added in later releases.
             </p>
             <p>
               Thank you to <a href="https://xivapi.com/">XIVApi</a> for
