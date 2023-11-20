@@ -10,7 +10,7 @@ import {
 } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
-import { listActions, actions, fragments } from "../Actions";
+import { listActions, actions, fragments, fragmentList } from "../Actions";
 import markerIconPng from "leaflet/dist/images/marker-icon.png";
 import { Icon } from "leaflet";
 
@@ -22,6 +22,8 @@ const bounds = [
 function FragmentLookup() {
   const [action, setAction] = React.useState(null);
   const [inputValue, setInputValue] = React.useState("");
+  const [fragment, setFragment] = React.useState("")
+  const [fragmentInputValue, setFragmentInputValue] = React.useState("")
   const [z, a] = React.useState([]);
 
   const setColor = (level) => {
@@ -44,11 +46,11 @@ function FragmentLookup() {
   };
 
   React.useEffect(() => {
-    if (action) {
+    if (fragment !== "") {
       const tmp = [];
       {
-        if (fragments[action.Fragment].BSF)
-          fragments[action.Fragment].BSF.forEach((locations) => {
+        if (fragments[fragment].BSF)
+          fragments[fragment].BSF.forEach((locations) => {
             locations.forEach((e) => {
               if (e.Level === "Star") {
                 tmp.push(
@@ -91,7 +93,7 @@ function FragmentLookup() {
     } else {
       a(null);
     }
-  }, [action]);
+  }, [action, fragment]);
 
   return (
     <>
@@ -124,6 +126,7 @@ function FragmentLookup() {
               Thank you to <a href="https://xivapi.com/">XIVApi</a> for
               providing the map and icons.
             </p>
+            <div style={{display: "inline"}}>
             <Autocomplete
               inputValue={inputValue}
               onInputChange={(event, newInputValue) => {
@@ -135,19 +138,42 @@ function FragmentLookup() {
               }}
               value={inputValue}
               onChange={(event, newValue) => {
-                console.log(newValue);
-                console.log(action);
-                setAction(actions.filter((x) => x.ActionName === newValue)[0]);
+                const val = actions.filter((x) => x.ActionName === newValue)[0]
+                if(val){
+                    setAction(val);
+                setFragment(val.Fragment)
+                setFragmentInputValue(val.Fragment)
+                }
               }}
               disablePortal
               id="combo-box-demo"
               options={listActions}
-              sx={{ width: 300 }}
-              style={{ color: "blue", margin: "10px", minWidth: "350px" }}
+              style={{ color: "blue", margin: "10px", minWidth: "350px", float:"left" }}
               renderInput={(params) => (
                 <TextField {...params} label="Action/Essence/Item" />
               )}
             />
+            <Autocomplete
+              inputValue={fragmentInputValue}
+              value={fragmentInputValue}
+              onInputChange={(event, newInputValue, reason) => {
+                  setFragmentInputValue(newInputValue)
+              }}
+              onChange={(event, newValue) => {
+                console.log(newValue)
+                setFragment(newValue)
+                setAction("");
+                setInputValue("")
+              }}
+              disablePortal
+              id="combo-box-demo"
+              options={fragmentList}
+              style={{ color: "blue", margin: "10px", minWidth: "350px", float:"left" }}
+              renderInput={(params) => (
+                <TextField {...params} label="Fragment" />
+              )}
+            />
+            </div>
           </Card>
         </div>
       }
@@ -181,7 +207,7 @@ function FragmentLookup() {
                 style={{ width: "100%", height: "100%" }}
                 zoomControl={false}
               >
-                {action && fragments[action.Fragment].Quartermaster ? (
+                {fragment && fragments[fragment].Quartermaster ? (
                   <Marker
                     position={[32.6, 9.65]}
                     icon={
@@ -195,7 +221,7 @@ function FragmentLookup() {
                     <Popup>Resistance Quartermaster</Popup>
                   </Marker>
                 ) : null}
-                {action && fragments[action.Fragment].CLL ? (
+                {fragment && fragments[fragment].CLL ? (
                   <Marker
                     position={[33.4, 9.85]}
                     icon={
@@ -209,7 +235,7 @@ function FragmentLookup() {
                     <Popup>CLL Prisoner Chests</Popup>
                   </Marker>
                 ) : null}
-                {action && (fragments[action.Fragment].DR || fragments[action.Fragment].DRS)  ? (
+                {fragment && (fragments[fragment].DR || fragments[fragment].DRS)  ? (
                   <Marker
                     position={[32.54, 9.6]}
                     icon={
@@ -220,7 +246,7 @@ function FragmentLookup() {
                       })
                     }
                   >
-                    <Popup>Delubrum Reginae {fragments[action.Fragment].DRS ? "(Savage)" : null}</Popup>
+                    <Popup>Delubrum Reginae {fragments[fragment].DRS ? "(Savage)" : null}</Popup>
                   </Marker>
                 ) : null}
                 {/*<Circle
