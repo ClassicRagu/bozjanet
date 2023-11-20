@@ -126,8 +126,9 @@ function FragmentLookup() {
             !fragments[fragment].Zadnor)) ? (
           <BSFFragmentMap />
         ) : null}
-        {fragment && fragments[fragment].Zadnor ||
-          fragments[fragment].Dal ? <ZadnorFragmentMap /> : null}
+        {fragment && (fragments[fragment].Zadnor || fragments[fragment].Dal) ? (
+          <ZadnorFragmentMap />
+        ) : null}
         <div
           style={{
             display: "flex",
