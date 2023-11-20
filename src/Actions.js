@@ -524,6 +524,30 @@ const bsfResolveCEs = [
 ];
 
 const zadnorTenacityCEs = [
+  {
+    Monster: "Feeling the Burn",
+    Level: "Critical Engagement",
+    Location: [33.22, 9.77],
+    radius: 3500,
+  },
+  {
+    Monster: "Lean, Mean, Magitek Machines",
+    Level: "Critical Engagement",
+    Location: [33.42, 9.7],
+    radius: 3500,
+  },
+  {
+    Monster: "Looks to Die For",
+    Level: "Critical Engagement",
+    Location: [33.57, 9.8],
+    radius: 3500,
+  },
+  {
+    Monster: "Worn to a Shadow",
+    Level: "Critical Engagement",
+    Location: [33.675, 9.525],
+    radius: 3500,
+  },
 ];
 
 export const quartermasterCoords = [32.6, 9.653];

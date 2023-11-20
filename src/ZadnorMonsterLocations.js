@@ -74,6 +74,13 @@ export const zadnorMonsterLocations = {
         radius: 6500,
         additionalInfo: "Snow only",
       },
+      {
+        Monster: "Wind Sprite",
+        Level: 5,
+        Location: [32.27, 9.765],
+        radius: 7000,
+        additionalInfo: "Wind only",
+      },
     ],
     Star: [
       {
@@ -161,6 +168,13 @@ export const zadnorMonsterLocations = {
       },
     ],
     Sprites: [
+      {
+        Monster: "Wind Sprite",
+        Level: 2,
+        Location: [32.23, 9.28],
+        radius: 7000,
+        additionalInfo: "Wind only",
+      },
       {
         Monster: "Ice Sprite",
         Level: 3,
@@ -302,6 +316,13 @@ export const zadnorMonsterLocations = {
         Location: [33.68, 9.525],
         radius: 6000,
         additionalInfo: "Thunder only",
+      },
+      {
+        Monster: "Wind Sprite",
+        Level: 4,
+        Location: [33.48, 9.8],
+        radius: 5000,
+        additionalInfo: "Wind only",
       },
       {
         Monster: "Ice Sprite",

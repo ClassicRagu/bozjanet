@@ -71,15 +71,6 @@ function ZadnorFragmentMap() {
                 <Popup>First Boss Dal Chest</Popup>
               </Marker>
             ) : null}
-            {<Circle
-                center={[33.25, 10.1]}
-                pathOptions={{ fillColor: 'blue', color: 'blue' }}
-                radius={7000}
-              >
-                <Popup>
-                  test
-                </Popup>
-                </Circle>}
             {zadnorMarkers}
             <ImageOverlay
               url="https://xivapi.com/m/n4b6/n4b6.01.jpg"
