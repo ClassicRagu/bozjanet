@@ -1,19 +1,18 @@
 import * as React from "react";
-import BozjaAccordians from "./BozjaAccordians";
 import { Autocomplete, TextField } from "@mui/material";
 import { Card } from "@mui/material";
 import {
   MapContainer,
-  ZoomControl,
-  TileLayer,
-  GeoJSON,
   ImageOverlay,
   Circle,
   Popup,
+  Marker,
 } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
 import { listActions, actions, fragments } from "../Actions";
+import markerIconPng from "leaflet/dist/images/marker-icon.png";
+import { Icon } from "leaflet";
 
 const bounds = [
   [34, 9],
@@ -23,37 +22,52 @@ const bounds = [
 function FragmentLookup() {
   const [action, setAction] = React.useState(null);
   const [inputValue, setInputValue] = React.useState("");
-  const [x, y] = React.useState(true);
   const [z, a] = React.useState([]);
-
-  const handleClick = () => {
-    y(!x);
-  };
+  
+  const setColor = (level) => {
+    switch(level) {
+        case 1:
+            return "green"
+        case 2:
+            return "yellow"
+        case 3:
+            return "red"
+        case 4:
+            return "purple"
+        case 5:
+            return "black"
+        default:
+            return "blue"
+    }
+  }
 
   React.useEffect(() => {
-    console.log(action);
-  });
-
-  React.useEffect(() => {
-    if (x && action) {
+    if (action) {
       const tmp = [];
-      /*actions.forEach((p) => {
-        tmp.push(<Circle
-            center={p.BSF[0].Location}
-            pathOptions={{ fillColor: "blue" }}
-            radius={4000}
-          >
-            <Popup>
-              {p.BSF[0].Monster} <br /> Level:{p.BSF[0].Level}
-            </Popup>
-          </Circle>)
-    })*/
-    fragments[action.Fragment].BSF.forEach((locations) => {
+      fragments[action.Fragment].BSF.forEach((locations) => {
         locations.forEach((e) => {
+          if (e.Level === "Star") {
+            tmp.push(
+              <Marker
+                position={e.Location}
+                icon={
+                  new Icon({
+                    iconUrl: markerIconPng,
+                    iconSize: [21, 41],
+                    iconAnchor: [11, 41],
+                  })
+                }
+              >
+                <Popup>
+                  {e.Monster} <br /> Level:{e.Level}
+                </Popup>
+              </Marker>
+            );
+          } else if (e) {
             tmp.push(
               <Circle
                 center={e.Location}
-                pathOptions={{ fillColor: "blue" }}
+                pathOptions={{ fillColor: setColor(e.Level), color: setColor(e.Level) }}
                 radius={e.radius}
               >
                 <Popup>
@@ -61,9 +75,10 @@ function FragmentLookup() {
                 </Popup>
               </Circle>
             );
-          });
-      })
-      
+          }
+        });
+      });
+
       a(tmp);
     } else {
       a(null);
@@ -73,45 +88,69 @@ function FragmentLookup() {
   return (
     <>
       {
-        <Card
-          variant="outlined"
-          sx={{
-            maxWidth: 800,
-            width: "100%",
-          }}
+        <div
           style={{
-            textAlign: "center",
             display: "flex",
-            justifyItems: "center",
             justifyContent: "center",
+            justifyItems: "center",
           }}
         >
-          <Autocomplete
-            inputValue={inputValue}
-            onInputChange={(event, newInputValue) => {
-                if(newInputValue !== undefined){
-              setInputValue(newInputValue);} else {
-                setInputValue("")
-              }
+          <Card
+            variant="outlined"
+            sx={{
+              maxWidth: 800,
+              width: "100%",
             }}
-            value={inputValue}
-            onChange={(event, newValue) => {
-              console.log(newValue);
-              console.log(action);
-              setAction(actions.filter((x) => x.ActionName === newValue)[0]);
+            style={{
+              textAlign: "center",
+              display: "column",
+              justifyItems: "center",
+              justifyContent: "center",
             }}
-            disablePortal
-            id="combo-box-demo"
-            options={listActions}
-            sx={{ width: 300 }}
-            style={{ color: "blue", margin: "10px" }}
-            renderInput={(params) => <TextField {...params} label="Actions" />}
-          />
-        </Card>
+          >
+            <p>
+              This page is under construction. It will include Resolve Frags,
+              CLL, DRN, Zadnor, and better styling in later releases.
+            </p>
+            <p>
+              Thank you to <a href="https://xivapi.com/">XIVApi</a> for
+              providing the map data.
+            </p>
+            <Autocomplete
+              inputValue={inputValue}
+              onInputChange={(event, newInputValue) => {
+                if (newInputValue !== undefined) {
+                  setInputValue(newInputValue);
+                } else {
+                  setInputValue("");
+                }
+              }}
+              value={inputValue}
+              onChange={(event, newValue) => {
+                console.log(newValue);
+                console.log(action);
+                setAction(actions.filter((x) => x.ActionName === newValue)[0]);
+              }}
+              disablePortal
+              id="combo-box-demo"
+              options={listActions}
+              sx={{ width: 300 }}
+              style={{ color: "blue", margin: "10px" }}
+              renderInput={(params) => (
+                <TextField {...params} label="Lost Actions" />
+              )}
+            />
+          </Card>
+        </div>
       }
       <>
-        <div style={{ justifyContent: "center", flexDirection: "column" }}>
-          {<button onClick={() => handleClick()}>Hello There</button>}
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            justifyItems: "center",
+          }}
+        >
           <Card
             variant="outlined"
             sx={{
@@ -127,7 +166,6 @@ function FragmentLookup() {
           >
             <div style={{ width: "100%", height: "600px" }} className="App">
               <MapContainer
-                // whenReady={setMapRef}
                 center={[33, 10]}
                 zoom={9}
                 maxZoom={11}
@@ -135,16 +173,19 @@ function FragmentLookup() {
                 style={{ width: "100%", height: "100%" }}
                 zoomControl={false}
               >
-                {true ? (
-                  <Circle
-                    center={[33.23, 9.605]}
-                    pathOptions={{ fillColor: "blue" }}
-                    radius={7500}
+                {action && fragments[action.Fragment].Quartermaster ? (
+                  <Marker
+                    position={[32.6, 9.65]}
+                    icon={
+                      new Icon({
+                        iconUrl: markerIconPng,
+                        iconSize: [21, 41],
+                        iconAnchor: [11, 41],
+                      })
+                    }
                   >
-                    <Popup>
-                      Patriot Games <br /> CE
-                    </Popup>
-                  </Circle>
+                    <Popup>Resistance Quartermaster</Popup>
+                  </Marker>
                 ) : null}
                 {z}
                 <ImageOverlay
@@ -153,6 +194,34 @@ function FragmentLookup() {
                 />
               </MapContainer>
             </div>
+          </Card>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            justifyItems: "center",
+          }}
+        >
+          <Card
+            variant="outlined"
+            sx={{
+              maxWidth: 800,
+              width: "100%",
+            }}
+            style={{
+              textAlign: "center",
+              display: "column",
+              justifyItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <p>
+              FINAL FANTASY XIV © 2010 - 2023 SQUARE ENIX CO., LTD. FINAL
+              FANTASY, FINAL FANTASY XIV, and FFXIV are registered trademarks or
+              trademarks of Square Enix Holdings Co., Ltd. All material used
+              under license.
+            </p>
           </Card>
         </div>
       </>

@@ -47,16 +47,42 @@ export const bsfMonsterLocations = {
       },
     ],
     Sprites: [
-        {
-            Monster: "Lightning Sprite",
-            Level: 5,
-            Location: [32.63, 10.66],
-            radius: 7500,
-          },
+      {
+        Monster: "Earth Sprite",
+        Level: 2,
+        Location: [32.82, 10.19],
+        radius: 7500,
+      },
+      {
+        Monster: "Wind Sprite",
+        Level: 3,
+        Location: [32.68, 10.4],
+        radius: 4000,
+      },
+      {
+        Monster: "Lightning Sprite",
+        Level: 5,
+        Location: [32.63, 10.66],
+        radius: 7500,
+      },
     ],
     Star: [
-        
-    ]
+      {
+        Monster: "Tideborn Angel",
+        Level: "Star",
+        Location: [32.58, 9.95],
+      },
+      {
+        Monster: "Fern Flower",
+        Level: "Star",
+        Location: [32.83, 10.22],
+      },
+      {
+        Monster: "Ink Claw",
+        Level: "Star",
+        Location: [32.7, 10.67],
+      },
+    ],
   },
   Zone2: {
     Normal: [
@@ -116,12 +142,12 @@ export const bsfMonsterLocations = {
       },
     ],
     Ashkin: [
-        {
-            Monster: "Bozjan Wight",
-            Level: 3,
-            Location: [33.09, 10.17],
-            radius: 4000,
-          },
+      {
+        Monster: "Bozjan Wight",
+        Level: 3,
+        Location: [33.09, 10.17],
+        radius: 4000,
+      },
       {
         Monster: "Bozjan Dullahan",
         Level: 5,
@@ -131,15 +157,47 @@ export const bsfMonsterLocations = {
     ],
     Sprites: [
         {
-            Monster: "Lightning Sprite",
-            Level: 3,
-            Location: [32.93, 10.27],
-            radius: 3000,
+            Monster: "Rain Sprite",
+            Level: 2,
+            Location: [32.83, 10.47],
+            radius: 5000,
           },
+      {
+        Monster: "Lightning Sprite",
+        Level: 3,
+        Location: [32.93, 10.27],
+        radius: 3000,
+      },
+      {
+        Monster: "Wind Sprite",
+        Level: 4,
+        Location: [33.025, 10],
+        radius: 5500,
+      },
+      {
+        Monster: "Earth Sprite",
+        Level: 5,
+        Location: [33.02, 9.74],
+        radius: 5500,
+      }
     ],
     Star: [
-
-    ]
+        {
+            Monster: "Viy",
+            Level: "Star",
+            Location: [33.08, 10.35],
+          },
+          {
+            Monster: "Psoglav",
+            Level: "Star",
+            Location: [33.16, 10.56],
+          }, 
+          {
+            Monster: "Smok",
+            Level: "Star",
+            Location: [32.96, 9.7],
+          }, 
+    ],
   },
   Zone3: {
     Normal: [
@@ -211,29 +269,62 @@ export const bsfMonsterLocations = {
       },
     ],
     Ashkin: [
-        {
-            Monster: "Bozjan Gravekeeper",
-            Level: 3,
-            Location: [33.2, 9.87],
-            radius: 4000,
-          },
-          {
-            Monster: "Bozjan Rider",
-            Level: 5,
-            Location: [33.32, 10.07],
-            radius: 6000,
-          },
+      {
+        Monster: "Bozjan Gravekeeper",
+        Level: 3,
+        Location: [33.2, 9.87],
+        radius: 4000,
+      },
+      {
+        Monster: "Bozjan Rider",
+        Level: 5,
+        Location: [33.32, 10.07],
+        radius: 6000,
+      },
     ],
     Sprites: [
-        {
-            Monster: "Lightning Sprite",
-            Level: 2,
-            Location: [33.23, 9.605],
-            radius: 7500,
-          },
+      {
+        Monster: "Lightning Sprite",
+        Level: 2,
+        Location: [33.23, 9.605],
+        radius: 7500,
+      },
+      {
+        Monster: "Rain Sprite",
+        Level: 3,
+        Location: [33.13, 9.75],
+        radius: 5500,
+      },
+      {
+        Monster: "Earth Sprite",
+        Level: 4,
+        Location: [33.14, 9.89],
+        radius: 5000,
+      }
+      ,
+      {
+        Monster: "Wind Sprite",
+        Level: 5,
+        Location: [33.16, 10.05],
+        radius: 5500,
+      }
     ],
     Star: [
-        
-    ]
+        {
+            Monster: "Bird of Barathrum",
+            Level: "Star",
+            Location: [33.4, 10.15],
+          },
+          {
+            Monster: "Clingy Claire",
+            Level: "Star",
+            Location: [33.15, 9.83],
+          },
+          {
+            Monster: "Patty",
+            Level: "Star",
+            Location: [33.15, 9.38],
+          },
+    ],
   },
 };

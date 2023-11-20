@@ -4,7 +4,6 @@ import { Box, Grid, Button } from "@mui/material";
 import Guides from "./components/Guides";
 import { useWindowDimensions } from "./hooks/useWindowDimensions";
 import FAQ from "./components/FAQ";
-import About from "./components/About";
 import FragmentLookup from "./components/FragmentLookup";
 
 function App() {
@@ -121,16 +120,16 @@ function App() {
             <Button
               size="large"
               variant={
-                pageState === "initial" || pageState === "about"
+                pageState === "initial" || pageState === "fragments"
                   ? "contained"
                   : "outlined"
               }
               style={{minWidth: "250px"}}
               onClick={() => {
-                setPageState("about");
+                setPageState("fragments");
               }}
             >
-              About
+              (Alpha) Fragment Map
             </Button>
           </Grid>
         </Grid>
@@ -176,15 +175,7 @@ function App() {
         </Box>
       ) : null}
       {
-        pageState === "about" ? <><Box
-          style={{
-            display: "flex",
-            alignContent: "center",
-            justifyContent: "center",
-          }}
-        >
-          {/*<FragmentLookup />*/}
-        </Box>
+        pageState === "fragments" ? <>
         <FragmentLookup />
         </> : null
       }
