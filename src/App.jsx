@@ -4,7 +4,7 @@ import { Box, Grid, Button } from "@mui/material";
 import Guides from "./components/Guides";
 import { useWindowDimensions } from "./hooks/useWindowDimensions";
 import FAQ from "./components/FAQ";
-import FragmentLookup from "./components/FragmentLookup";
+import FragmentLookup from "./components/FragmentMap/FragmentLookup";
 
 function App() {
   const [pageState, setPageState] = React.useState("guides");
@@ -129,7 +129,7 @@ function App() {
                 setPageState("fragments");
               }}
             >
-              (Alpha) Fragment Map
+              Fragment Map
             </Button>
           </Grid>
         </Grid>
