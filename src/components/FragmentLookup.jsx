@@ -114,7 +114,7 @@ function FragmentLookup() {
             </p>
             <p>
               Thank you to <a href="https://xivapi.com/">XIVApi</a> for
-              providing the map data.
+              providing the BSF map image.
             </p>
             <Autocomplete
               inputValue={inputValue}
@@ -137,7 +137,7 @@ function FragmentLookup() {
               sx={{ width: 300 }}
               style={{ color: "blue", margin: "10px" }}
               renderInput={(params) => (
-                <TextField {...params} label="Lost Actions" />
+                <TextField {...params} label="Action/Essence/Item" />
               )}
             />
           </Card>
@@ -187,6 +187,29 @@ function FragmentLookup() {
                     <Popup>Resistance Quartermaster</Popup>
                   </Marker>
                 ) : null}
+                {action && fragments[action.Fragment].CLL ? (
+                  <Marker
+                    position={[33.4, 9.85]}
+                    icon={
+                      new Icon({
+                        iconUrl: 'https://xivapi.com/i/063000/063912_hr1.png',
+                        iconSize: [50, 50],
+                        iconAnchor: [25, 25],
+                      })
+                    }
+                  >
+                    <Popup>CLL Prisoner Chests</Popup>
+                  </Marker>
+                ) : null}
+                {/*<Circle
+                center={[33.32, 10.09]}
+                pathOptions={{ fillColor: 'blue', color: 'blue' }}
+                radius={3500}
+              >
+                <Popup>
+                  test
+                </Popup>
+                </Circle>*/}
                 {z}
                 <ImageOverlay
                   url="https://xivapi.com/m/n4b4/n4b4.01.jpg"

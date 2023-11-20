@@ -1,6 +1,12 @@
 import { bsfMonsterLocations } from "./BSFMonsterLocations";
 
 export const listActions = [
+    "Banner of Firm Resolve",
+    "Banner of Honed Acuity",
+    "Banner of Honored Sacrifice",
+    "Banner of Noble Ends",
+    "Banner of Solemn Clarity",
+    "Banner of Tireless Conviction",
     "Essence of the Aetherweaver",
     "Essence of the Breathtaker",
     "Essence of the Guardian",
@@ -204,9 +210,53 @@ export const actions = [
     ActionName: "Lost Swift",
     Fragment: "Ingenuity",
   },
+  {
+    ActionName: "Banner of Firm Resolve",
+    Fragment: "Resolve",
+  },
+  {
+    ActionName: "Banner of Honed Acuity",
+    Fragment: "Resolve",
+  },
+  {
+    ActionName: "Banner of Honored Sacrifice",
+    Fragment: "Resolve",
+  },
+  {
+    ActionName: "Banner of Noble Ends",
+    Fragment: "Resolve",
+  },
+  {
+    ActionName: "Banner of Solemn Clarity",
+    Fragment: "Resolve",
+  },
+  {
+    ActionName: "Banner of Tireless Conviction",
+    Fragment: "Resolve",
+  },
 ]
 
-const bsfResolveCEs = [];
+const bsfResolveCEs = [
+    {
+    Monster: "Trampled under Hoof",
+    Level: "Critical Engagement",
+    Location: [33.05, 9.51],
+    radius: 3500,
+  },
+  {
+    Monster: "Where Strode the Behemoth",
+    Level: "Critical Engagement",
+    Location: [33.32, 10.09],
+    radius: 3500,
+  },
+  {
+    Monster: "Metal Fox Chaos",
+    Level: "Critical Engagement",
+    Location: [33.145, 9.645],
+    radius: 3500,
+  },
+
+];
 
 export const quartermasterCoords = [32.6, 9.653];
 
