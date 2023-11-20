@@ -1,4 +1,5 @@
 import { bsfMonsterLocations } from "./BSFMonsterLocations";
+import { zadnorMonsterLocations } from "./ZadnorMonsterLocations";
 
 export const listActions = [
   "Banner of Firm Resolve",
@@ -38,10 +39,17 @@ export const listActions = [
   "Essence of the Templar",
   "Essence of the Veteran",
   "Essence of the Watcher",
+  "Light Curtain",
+  "Lodestone",
   "Lost Aethershield",
   "Lost Arise",
+  "Lost Assassination",
   "Lost Banish III",
+  "Lost Blood Rage",
   "Lost Bravery",
+  "Lost Bubble",
+  "Lost Burst",
+  "Lost Chainspell",
   "Lost Cure",
   "Lost Cure II",
   "Lost Cure III",
@@ -49,27 +57,35 @@ export const listActions = [
   "Lost Death",
   "Lost Dervish",
   "Lost Dispel",
+  "Lost Excellence",
   "Lost Fair Trade",
   "Lost Focus",
   "Lost Flare Star",
   "Lost Font of Magic",
   "Lost Font of Power",
   "Lost Font of Skill",
+  "Lost Full Cure",
   "Lost Incense",
+  "Lost Impetus",
   "Lost Manawall",
   "Lost Paralyze III",
   "Lost Perception",
   "Lost Protect",
+  "Lost Protect II",
+  "Lost Rampage",
   "Lost Reflect",
+  "Lost Reraise",
   "Lost Rend Armor",
   "Lost Sacrifice",
   "Lost Seraph Strike",
   "Lost Shell",
+  "Lost Shell II",
   "Lost Slash",
   "Lost Spellforge",
   "Lost Stealth",
   "Lost Steelsting",
   "Lost Stoneskin",
+  "Lost Stoneskin II",
   "Lost Swift",
   "Mimic",
   "Pure Essence of the Divine",
@@ -78,6 +94,7 @@ export const listActions = [
   "Pure Essence of the Fiendhunter",
   "Pure Essence of the Gambler",
   "Pure Essence of the Indomitable",
+  "Resistance Elixir",
   "Resistance Ether Kit",
   "Resistance Medikit",
   "Resistance Phoenix",
@@ -419,6 +436,70 @@ export const actions = [
     ActionName: "Lost Perception",
     Fragment: "Observation",
   },
+  {
+    ActionName: "Lost Rereaise",
+    Fragment: "Hope",
+  },
+  {
+    ActionName: "Light Curtain",
+    Fragment: "Moonlight",
+  },
+  {
+    ActionName: "Lost Stoneskin II",
+    Fragment: "Rage",
+  },
+  {
+    ActionName: "Lost Burst",
+    Fragment: "Rage",
+  },
+  {
+    ActionName: "Lost Rampage",
+    Fragment: "Ferocity",
+  },
+  {
+    ActionName: "Lost Protect II",
+    Fragment: "Desperation",
+  },
+  {
+    ActionName: "Lost Shell II",
+    Fragment: "Desperation",
+  },
+  {
+    ActionName: "Lost Bubble",
+    Fragment: "Tenacity",
+  },
+  {
+    ActionName: "Lodestone",
+    Fragment: "History",
+  },
+  {
+    ActionName: "Lost Impetus",
+    Fragment: "Inspiration",
+  },
+  {
+    ActionName: "Lost Chainspell",
+    Fragment: "Artistry",
+  },
+  {
+    ActionName: "Lost Assassination",
+    Fragment: "Artistry",
+  },
+  {
+    ActionName: "Resistance Elixir",
+    Fragment: "Heroism",
+  },
+  {
+    ActionName: "Lost Excellence",
+    Fragment: "Heroism",
+  },
+  {
+    ActionName: "Lost Blood Rage",
+    Fragment: "Cunning",
+  },
+  {
+    ActionName: "Lost Full Cure",
+    Fragment: "Revelation",
+  },
 ];
 
 const bsfResolveCEs = [
@@ -442,9 +523,13 @@ const bsfResolveCEs = [
   },
 ];
 
+const zadnorTenacityCEs = [
+];
+
 export const quartermasterCoords = [32.6, 9.653];
 
 export const fragmentList = [
+  "Artistry",
     "Awakening",
     "Becoming",
     "Caprice",
@@ -453,20 +538,31 @@ export const fragmentList = [
     "Clarity",
     "Compassion",
     "Contention",
+    "Cunning",
     "Deception",
+    "Desperation",
     "Divinity",
+    "Ferocity",
     "Finesse",
     "Fortitude",
+    "Heroism",
+    "Hope",
+    "History",
     "Ingenuity",
+    "Inspiration",
     "Loss",
     "Mastery",
+    "Moonlight",
     "Observation",
     "Preparation",
+    "Rage",
     "Resolve",
+    "Revelation",
     "Sagacity",
     "Skill",
     "Superstition",
     "Support",
+    "Tenacity",
     "Transcendence",
     "Violence"
   ]
@@ -474,17 +570,19 @@ export const fragmentList = [
 export const fragments = {
   Skill: { BSF: [bsfMonsterLocations.Zone1.Normal] },
   Awakening: { BSF: [bsfMonsterLocations.Zone2.Normal] },
-  Compassion: { BSF: [bsfMonsterLocations.Zone3.Normal] },
+  Compassion: { BSF: [bsfMonsterLocations.Zone3.Normal], Zadnor: [zadnorMonsterLocations.Zone3.Normal5] },
   Care: {
     BSF: [bsfMonsterLocations.Zone2.Ashkin, bsfMonsterLocations.Zone2.Sprites],
+    Zadnor: [zadnorMonsterLocations.Zone2.Ashkin]
   },
   Caution: { Quartermaster: true, BSF: [bsfMonsterLocations.Zone1.Star] },
-  Support: { BSF: [bsfMonsterLocations.Zone3.Sprites] },
+  Support: { BSF: [bsfMonsterLocations.Zone3.Sprites], Zadnor: [zadnorMonsterLocations.Zone3.Sprites] },
   Violence: {
     BSF: [bsfMonsterLocations.Zone3.Ashkin, bsfMonsterLocations.Zone3.Star],
   },
   Preparation: {
     BSF: [bsfMonsterLocations.Zone1.Ashkin, bsfMonsterLocations.Zone1.Sprites],
+    Zadnor: [zadnorMonsterLocations.Zone1.Ashkin]
   },
   Ingenuity: { Quartermaster: true, BSF: [bsfMonsterLocations.Zone2.Star] },
   Resolve: { BSF: [bsfResolveCEs] },
@@ -502,4 +600,16 @@ export const fragments = {
   Fortitude: {DR: true, Quartermaster: true},
   Loss: {DR: true},
   Observation: {DR: true, Quartermaster: true},
+  Hope: {Quartermaster: true},
+  Moonlight: {Zadnor: [zadnorMonsterLocations.Zone2.Normal]},
+  Rage: {Zadnor: [zadnorMonsterLocations.Zone1.NormalRage, zadnorMonsterLocations.Zone1.NormalBoth]},
+  Ferocity: {Zadnor: [zadnorMonsterLocations.Zone1.NormalFerocity, zadnorMonsterLocations.Zone1.NormalBoth] },
+  Desperation: {Zadnor: [zadnorMonsterLocations.Zone3.Normal]},
+  Tenacity: {Zadnor: [zadnorTenacityCEs]},
+  History: {Zadnor: [zadnorMonsterLocations.Zone1.Sprites, zadnorMonsterLocations.Zone1.Star]},
+  Inspiration: {Zadnor: [zadnorMonsterLocations.Zone3.Ashkin, zadnorMonsterLocations.Zone3.Star]},
+  Artistry: {Zadnor: [zadnorMonsterLocations.Zone2.Sprites, zadnorMonsterLocations.Zone2.Star]},
+  Heroism: {Dal: true},
+  Cunning: {Dal: true},
+  Revelation: {Dal: true}
 };
