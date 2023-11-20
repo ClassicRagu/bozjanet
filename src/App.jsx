@@ -129,7 +129,7 @@ function App() {
                 setPageState("fragments");
               }}
             >
-              (Alpha) Fragment Map
+              Fragment Map
             </Button>
           </Grid>
         </Grid>
