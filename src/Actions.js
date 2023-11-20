@@ -445,31 +445,31 @@ const bsfResolveCEs = [
 export const quartermasterCoords = [32.6, 9.653];
 
 export const fragmentList = [
-    "Skill",
     "Awakening",
-    "Compassion",
-    "Care",
-    "Caution",
-    "Support",
-    "Violence",
-    "Preparation",
-    "Ingenuity",
-    "Resolve",
-    "Mastery",
-    "Sagacity",
-    "Superstition",
-    "Transcendence",
     "Becoming",
     "Caprice",
+    "Care",
+    "Caution",
     "Clarity",
+    "Compassion",
     "Contention",
     "Deception",
     "Divinity",
     "Finesse",
     "Fortitude",
+    "Ingenuity",
     "Loss",
+    "Mastery",
     "Observation",
-];
+    "Preparation",
+    "Resolve",
+    "Sagacity",
+    "Skill",
+    "Superstition",
+    "Support",
+    "Transcendence",
+    "Violence"
+  ]
 
 export const fragments = {
   Skill: { BSF: [bsfMonsterLocations.Zone1.Normal] },

@@ -159,7 +159,6 @@ function FragmentLookup() {
                   setFragmentInputValue(newInputValue)
               }}
               onChange={(event, newValue) => {
-                console.log(newValue)
                 setFragment(newValue)
                 setAction("");
                 setInputValue("")
