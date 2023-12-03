@@ -25,15 +25,28 @@
     "Links": [[], []]
   },
   {
+    "Name": "What is the best gear in Bozja?",
+    "Info": [
+      "Stats are set in Bozja, not synced, so any gear works. Just make sure to have something equipped. Emperor's gear and level 90 BiS are the same!",
+      "The only exception to this is the Augmented Bozjan and Augmented Laws Order gear which gives haste in Bozja zones.",
+      "This haste bonus is nice but is by no means required for any content."
+    ],
+    "Links": [
+      [],
+      [],
+      []
+    ]
+  },
+  {
     "Name": "How Do I Get Lost Actions?",
     "Info": [
       "Lost Actions are obtained via Forgotten Fragments. Most fragments are obtained from overworld enemies though some come from other sources.",
-      "You can use this <LINK> to help find the fragment you are looking for.",
+      "You can use the Fragment Map feature to help find the fragment you are looking for.",
       "Here is a guide on farming fragments as well: <LINK>"
     ],
     "Links": [
       [],
-      ["Lost Action Helper", "https://bozja.info/bozja/lostaction"],
+      [],
       [
         "Cluster + Fragment Farming Guide",
         "https://docs.google.com/presentation/d/1ax8nkureepnIoTTSdcNhyIHQgCLqbcZzoe_H8kpyunU/edit?usp=sharing"
@@ -83,6 +96,31 @@
     "Links": [
       ["Follow this Guide", "https://i.imgur.com/OUHdHZT.png"],
       ["Follow this Guide", "https://i.imgur.com/y0jNEno.png"]
+    ]
+  },
+  {
+    "Name": "What do Resistance Honors give?",
+    "Info": [
+      "Ray of Valor: +3% Damage per stack",
+      "Ray of Fortitude: +5% HP per stack",
+      "Ray of Succor: +10% Healing per stack"
+    ],
+    "Links": [
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "Name": "Do people still play Bozja content?",
+    "Info": [
+      "Yes. If there are very few people in instance you are probably playing during more quiet hours.",
+      "On NA servers, BSF and Zadnor are most active during the evenings in the US."
+    ],
+    "Links": [
+      [],
+      [],
+      []
     ]
   }
 ]
