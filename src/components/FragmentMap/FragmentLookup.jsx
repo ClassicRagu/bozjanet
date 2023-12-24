@@ -1,28 +1,13 @@
 import * as React from "react";
 import { Autocomplete, TextField } from "@mui/material";
 import { Card } from "@mui/material";
-import {
-  MapContainer,
-  ImageOverlay,
-  Circle,
-  Popup,
-  Marker,
-} from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
 import { listActions, actions, fragments, fragmentList } from "../../Actions";
-import markerIconPng from "leaflet/dist/images/marker-icon.png";
-import { Icon } from "leaflet";
 import { useAtom } from "jotai";
 import { fragmentState } from "./hooks/fragmentState";
-import { setColor } from "./components/functions/setColor";
 import BSFFragmentMap from "./components/BSFFragmentMap";
 import ZadnorFragmentMap from "./components/ZadnorFragmentMap";
-
-const bounds = [
-  [34, 9],
-  [32, 11],
-];
 
 function FragmentLookup() {
   const [inputValue, setInputValue] = React.useState("");

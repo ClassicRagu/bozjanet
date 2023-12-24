@@ -1,21 +1,17 @@
 import * as React from "react";
-import { Autocomplete, TextField } from "@mui/material";
 import { Card } from "@mui/material";
 import {
   MapContainer,
   ImageOverlay,
-  Circle,
   Popup,
   Marker,
 } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
 import { fragments } from "../../../Actions";
-import markerIconPng from "leaflet/dist/images/marker-icon.png";
 import { Icon } from "leaflet";
 import { useAtom } from "jotai";
 import { fragmentState } from "../hooks/fragmentState";
-import { bsfMarkerState } from "../hooks/bsfMarkerState";
 import { zadnorMarkerState } from "../hooks/zadnorMarkerState";
 
 const bounds = [

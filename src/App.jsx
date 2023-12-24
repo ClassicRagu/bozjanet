@@ -8,7 +8,7 @@ import FragmentLookup from "./components/FragmentMap/FragmentLookup";
 
 function App() {
   const [pageState, setPageState] = React.useState("guides");
-  const { height, width } = useWindowDimensions();
+  const { width } = useWindowDimensions();
 
   return (
     <div>
@@ -28,32 +28,6 @@ function App() {
           width={"100%"}
           style={{ minHeight: "75px", maxWidth: "1000px", marginBottom: "5px" }}
         >
-          {/*<Grid
-            item
-            xs={width >= 800 ? 6 : 12}
-            style={{
-              display: "flex",
-              alignContent: "center",
-              justifyContent: "center",
-              maxHeight: "50px",
-              minWidth: "250px"
-            }}
-          >
-            <Button
-              size="large"
-              style={{minWidth: "250px"}}
-              variant={
-                pageState === "initial" || pageState === "new"
-                  ? "contained"
-                  : "outlined"
-              }
-              onClick={() => {
-                setPageState("new");
-              }}
-            >
-              I am new to Bozja
-            </Button>
-            </Grid>*/}
           <Grid
             item
             xs={width >= 800 ? 4 : 12}

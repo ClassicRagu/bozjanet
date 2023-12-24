@@ -11,7 +11,7 @@ import { useAtom } from "jotai";
 import { openKeyState } from "./hooks/openKeyState";
 
 function BozjaAccordians(props) {
-  const { height, width } = useWindowDimensions();
+  const { width } = useWindowDimensions();
   const [openKey, setOpenKey] = useAtom(openKeyState);
 
   const handleToggle = (key) => {

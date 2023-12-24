@@ -1,10 +1,8 @@
 import * as React from "react";
-import { Autocomplete, TextField } from "@mui/material";
 import { Card } from "@mui/material";
 import {
   MapContainer,
   ImageOverlay,
-  Circle,
   Popup,
   Marker,
 } from "react-leaflet";
@@ -100,15 +98,6 @@ function BSFFragmentMap() {
                 </Popup>
               </Marker>
             ) : null}
-            {/*<Circle
-                center={[33.32, 10.09]}
-                pathOptions={{ fillColor: 'blue', color: 'blue' }}
-                radius={3500}
-              >
-                <Popup>
-                  test
-                </Popup>
-                </Circle>*/}
             {bsfMarkers}
             <ImageOverlay
               url="https://xivapi.com/m/n4b4/n4b4.01.jpg"
