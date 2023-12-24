@@ -500,6 +500,10 @@ export const actions = [
     ActionName: "Lost Full Cure",
     Fragment: "Revelation",
   },
+  {
+    ActionName: "Lost Reraise",
+    Fragment: "Hope",
+  },
 ];
 
 const bsfResolveCEs = [
