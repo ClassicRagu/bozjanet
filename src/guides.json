@@ -2,8 +2,8 @@
   {
     "Name": "DRS",
     "Guides": [
-      ["Primal + Aether DRS Holsters", "https://bozja.info/drs/holster"],
-      ["Lost Actions", "https://bozja.info/bozja/lostaction"]
+      ["NA DRS Schedule", "https://docs.google.com/spreadsheets/d/13N8GAstI86L8o2WG_Emr3R5IRXnVXLQPldxnZrZ5wgE/"],
+      ["EU DRS Schedule", "https://docs.google.com/spreadsheets/d/1uPDvKs8BrqWVOXFtDcs1aWXfa0x0azS-5Qjc3cvGlV0/edit#gid=1371846925"]
     ],
     "Additional": ["Please look at the Discord servers linked for more DRS info."]
   },
@@ -50,6 +50,7 @@
     "Name": "DRN",
     "Guides": [
       ["DRN Speedrun Guide", "https://docs.google.com/presentation/d/1QP7R6tUbwSNWX30crFon2z3xhfe0m5NPu7pCySyI6r4/edit#slide=id.p"],
+      ["5 Person DRN Loadouts", "https://i.imgur.com/P1zuJfH.png"],
       ["CEM DRN Loadouts", "https://i.imgur.com/y0jNEno.png"]
     ]
   },
