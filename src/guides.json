@@ -52,7 +52,7 @@
     "Name": "DRN",
     "Guides": [
       ["DRN Speedrun Guide", "https://docs.google.com/presentation/d/1QP7R6tUbwSNWX30crFon2z3xhfe0m5NPu7pCySyI6r4/edit#slide=id.p"],
-      ["5 Person DRN Loadouts", "https://i.imgur.com/00T3Fs6.png"],
+      ["5 Person DRN Loadouts", "https://i.imgur.com/tjgIByv.png"],
       ["8 Person DRN Loadouts", "https://i.imgur.com/OmaJ15C.png"],
       ["CEM 24 Person DRN Loadouts", "https://i.imgur.com/y0jNEno.png"]
     ]
@@ -82,8 +82,7 @@
       ["(Crystal) CAFE [DR/CLL/Dal]", "https://discord.gg/c-a-f-e"],
       ["(Crystal) CEM [Omnifarms]", "https://discord.gg/cem"],
       ["(Crystal) I/O [Omnifarms/Mettle Farms/CLL/Dal]", "https://discord.gg/AcXV7qv9sU"],
-      ["(Aether) Lego Steppers", "https://discord.gg/kkM7MH5MWa"],
-      ["(Dyanmis) Phoenix Down Project [Everything]", "https://discord.gg/eyuhHprYMv"]
+      ["(Aether) Lego Steppers", "https://discord.gg/kkM7MH5MWa"]
     ]
   },
   {
@@ -95,6 +94,13 @@
       ["Conclave d'Exploration [LNG: FR]", "https://discord.gg/CgSRvTEHh8"],
       ["Boreal Bridge [LNG: ES]", "https://discord.gg/wmTbhNQ5Wn"],
       ["(Light) Savage Lemmings [LNG: DE]", "https://discord.gg/p3QwFREXJP"]
+    ]
+  },
+  {
+    "Name": "OCE Discord Servers",
+    "Guides": [
+      ["Content Achievers", "https://discord.gg/FJFxr2U"],
+      ["DRs Reclears", "https://discord.gg/rrG2SaDVD9"]
     ]
   },
   {
