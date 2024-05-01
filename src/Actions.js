@@ -510,7 +510,7 @@ const bsfResolveCEs = [
   {
     Monster: "Trampled under Hoof",
     Level: "Critical Engagement",
-    Location: [33.05, 9.51],
+    Location: [33.17, 9.44],
     radius: 3500,
   },
   {
