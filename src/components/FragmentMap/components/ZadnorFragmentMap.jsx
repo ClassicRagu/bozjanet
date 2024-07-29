@@ -58,7 +58,7 @@ function ZadnorFragmentMap() {
                 position={[33.6, 10.15]}
                 icon={
                   new Icon({
-                    iconUrl: "https://xivapi.com/i/063000/063912_hr1.png",
+                    iconUrl: "CLL.png",
                     iconSize: [50, 50],
                     iconAnchor: [25, 25],
                   })
@@ -69,7 +69,7 @@ function ZadnorFragmentMap() {
             ) : null}
             {zadnorMarkers}
             <ImageOverlay
-              url="https://xivapi.com/m/n4b6/n4b6.01.jpg"
+              url="Zadnor.jpg"
               bounds={bounds}
             />
           </MapContainer>

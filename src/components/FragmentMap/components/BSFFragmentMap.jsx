@@ -73,7 +73,7 @@ function BSFFragmentMap() {
                 position={[33.4, 9.85]}
                 icon={
                   new Icon({
-                    iconUrl: "https://xivapi.com/i/063000/063912_hr1.png",
+                    iconUrl: "CLL.png",
                     iconSize: [50, 50],
                     iconAnchor: [25, 25],
                   })
@@ -87,7 +87,7 @@ function BSFFragmentMap() {
                 position={[32.54, 9.6]}
                 icon={
                   new Icon({
-                    iconUrl: "https://xivapi.com/i/061000/061838_hr1.png",
+                    iconUrl: "Save The Queen.png",
                     iconSize: [34, 34],
                     iconAnchor: [17, 17],
                   })
@@ -100,7 +100,7 @@ function BSFFragmentMap() {
             ) : null}
             {bsfMarkers}
             <ImageOverlay
-              url="https://xivapi.com/m/n4b4/n4b4.01.jpg"
+              url="The Bozjan Southern Front.jpg"
               bounds={bounds}
             />
           </MapContainer>
