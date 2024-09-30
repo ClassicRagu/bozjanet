@@ -1,5 +1,7 @@
 # bozja.net
 
+# [This version of bozja.net is no longer maintained please go here for the new repo](https://github.com/ClassicRagu/bozjanet2)
+
 [A simple website for FFXIV Bozja content.](https://bozja.net)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
